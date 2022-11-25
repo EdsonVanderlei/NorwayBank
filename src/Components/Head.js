@@ -1,8 +1,10 @@
 import React from 'react'
 
 const Head = ({title}) => {
-    document.title = {title}
-
+    React.useState(()=>{
+        document.title = title
+    },[title])
+    
 }
 
 export default Head

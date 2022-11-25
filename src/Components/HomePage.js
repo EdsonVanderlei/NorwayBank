@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+import Head from './Head'
 import styles from './HomePage.module.css'
 import homeimg from '../Assets/img/14.png'
 import Card from './Card'
@@ -40,20 +40,25 @@ const HomePage = () => {
 
   function handleClick(event){
     event.preventDefault()
-    email.setValue('')
-    name.setValue('')
-    message.setValue('')
+    if(email.Validate()){
+      email.setValue('')
+      name.setValue('')
+      message.setValue('')
+    }
+    else{
+      alert('preencha corretamento o campo E-mail')
+    }
 
   }
 
-  const email = useForm();
+  const email = useForm('email');
   const name = useForm()
   const message = useForm()
 
 
   return (
     <div>
-
+      <Head title='Norway'/>
       <section className={styles.homepage}>
         <div className={styles.hometitle}>
           <h2>Chegamos!</h2>
@@ -136,7 +141,12 @@ const HomePage = () => {
 
             <h3>Fale com a NorwayBank</h3>
             <Input {...name} placeholder="Nome" />
+            <div>
             <Input {...email} placeholder="Email" />
+            {email.error && <p style={{color:'red', margin:'1rem 10px' ,fontSize:'12px'}}>{email.error}</p>}
+
+            </div>
+           
             <Input {...message}  type="textfield" placeholder="Message" />
 
 

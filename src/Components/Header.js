@@ -13,11 +13,12 @@ function handleOpen(){
 }
 
   return (
+    
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <div className={styles.logo}>
+        <a href='/' className={styles.logo}>
           <img src={logo} />
-        </div>
+        </a>
         <nav className={styles.nav}>
           <a href="/">Principal</a>
           <a href="/">Quem somos</a>
@@ -30,7 +31,7 @@ function handleOpen(){
           <Button handleClick={handleAcess} color='#fff' bg='#08590A' >Acessar Conta</Button>
           <Button handleClick={handleOpen} color='#fff' bg='#EF8018' >Abrir Conta</Button>
         </div>
-
+      
 
 
 

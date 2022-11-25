@@ -1,11 +1,11 @@
 import React from 'react'
 
-const useForm = () => {
+const useForm = (type) => {
 
     const types = {
        email: {
-            regex:'',
-            message:''
+            regex:/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+            message:'Digite um email valido'
 
 
         }
