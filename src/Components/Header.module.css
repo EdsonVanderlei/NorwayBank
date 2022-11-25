@@ -1,0 +1,52 @@
+.wrapper{
+    background-color: #333333;
+    padding: 5px 0;
+}
+
+.content{
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+.logo{
+    max-width: 200px;
+    padding: 10px;
+}
+
+.nav{
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    padding: 13px 20px;
+    transition: 0.4s ease-in-out;
+}
+
+a:hover{
+    color: #EF8018;
+}
+
+.buttons{
+    display: flex;
+}
+
+.buttons Button{
+    margin-right: 15px;
+}
