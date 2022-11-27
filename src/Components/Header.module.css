@@ -50,3 +50,102 @@ a:hover{
 .buttons Button{
     margin-right: 15px;
 }
+
+
+.menu{
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.burguer{
+  
+    display: none;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .5s;
+    z-index: 6;
+}
+
+.burguer span{
+    
+    cursor: pointer;
+    width: 25px;
+    display: block;
+    border: 0;
+    height: 3px;
+    background-color: #fff;
+    color: #fff;
+}
+
+
+
+.burguer::after{
+    bottom: 8px;
+}
+
+.burguer::before{
+    top: 8px;
+}
+
+
+
+@media (max-width:1038px) {
+    .burguer{
+        display: grid;
+    }
+
+
+    .nav, .menu, .buttons{
+        flex-direction: column;
+    }
+    
+    .buttons{
+        margin-top: 40px;
+    }
+
+    .buttons, .nav{
+        gap: 30px;
+    }
+
+    .menu{
+        display: none;
+        justify-content: flex-start;
+        position: fixed;
+       background-color: #333333;
+        min-height: 100vh;
+        padding-top: 68px;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        transform: translateX(50px);
+        opacity: 0;
+        transition: .5s ease-in-out;
+        animation: animaMenu 1s forwards;
+    }
+    .content{
+        justify-content: space-between;
+    width: 80%;
+
+    }
+
+
+
+}
+
+@keyframes animaMenu {
+    to{
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+.menu.active{
+    display: flex;
+    
+}

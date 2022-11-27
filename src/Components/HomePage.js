@@ -60,18 +60,19 @@ const HomePage = () => {
     <div>
       <Head title='Norway'/>
       <section className={styles.homepage}>
+        <div className={styles.content}>
         <div className={styles.hometitle}>
           <h2>Chegamos!</h2>
           <p>Com a missão de ser o norte<br /> para sua vida financeira.</p>
 
         </div>
         <img style={{ maxWidth: '494px' }} src={homeimg} alt="" />
-
+        </div>
       </section>
       <div className={styles.wrappercard}>
         <div className={styles.cards}>
 
-          <Card title='Somos diferentes' content={`Vantagens que nenhum outro banco pensou antes!`} />
+          <Card title='Somos diferentes' content='Vantagens que nenhum outro banco pensou antes!' />
           <Card title='Somos diferentes' content='Vantagens que nenhum outro banco pensou antes!' />
           <Card title='Somos diferentes' content='Vantagens que nenhum outro banco pensou antes!' />
         </div>

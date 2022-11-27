@@ -1,14 +1,14 @@
 .wrapper{
     max-width: 600px;
     width: 100%;   
-     overflow-x: hidden;
+     overflow: hidden;
     border-radius: 30px;
     position: relative;
 }
 
 .slider{
     display: flex;
-    height: 400px;
+    height: 300px;
     transition: 0.8s;
     border-radius: 30px;
 
